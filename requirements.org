@@ -77,8 +77,17 @@
    - Marks will be deducted for using library code that does the assignment
 
 ** Marking
-   - 3 marks for passing all of the tests 
-   - 1 mark for passing all of not-free-tests
-   - 2 marks for being usable in the browser
-   - 1 mark for looking better than what I gave you
-     
+   - Excellent 7/7: All tests pass (free and notfree), Meets
+     requirements. Looks SIGNIFICANTLY better than what I gave you.
+     Runs flawlessly in the browser (latency and synchronization).
+   - Good 6/7: All tests pass (free and notfree), Meets
+     requirements. Looks better than what I gave you.
+     Runs flawlessly in the browser (latency and synchronization).
+   - Satisfactory 5/7: All tests pass (free and notfree), meets most
+     requirements. Could look like what I gave or perhaps some minor
+     browser issues (latency and synchronization).
+   - Unsatisfactory 3/7: All tests pass (free and notfree). Clearly
+     limited effort. UI looks poor, browser issues such as latency and
+     synchronization.
+   - Failure 0/7: Any test fails. Browser doesn't work. No
+     synchronization in browser. Missing parts. Incomplete. Doesn't use websockets.
