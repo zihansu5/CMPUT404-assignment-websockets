@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width" />
     <meta name="license" content="
         Copyright 2013 Google, Abram Hindle
+        Copyright 2022 Google, Zihan Su
         
         Licensed under the Apache License, Version 2.0 (the "License");
         you may not use this file except in compliance with the License.
@@ -28,13 +29,13 @@
 
     <script>
       // Fix me
-    var canvas = document.getElementById('c');
-    var host = window.location.host;
-    var context = canvas.getContext("2d");
-    var W = canvas.width  = window.innerWidth-6;
-    var H = canvas.height = window.innerHeight-50;
-    var wscounter = 0;
-    var socket;
+var canvas = document.getElementById('c');
+var host = window.location.host;
+var context = canvas.getContext("2d");
+var W = canvas.width  = window.innerWidth-6;
+var H = canvas.height = window.innerHeight-50;
+var wscounter = 0;
+var socket;
 
 function debug(str) {
     var debugDiv = document.getElementById('debug');
@@ -72,7 +73,14 @@ function prepEntity(entity) {
 function clearFrame() {
     with(context) {
 	moveTo(0,0);
-	fillStyle = "#000";
+	// fillStyle = "#000";
+    var gradient = createLinearGradient(0,0,W,H);
+    gradient.addColorStop(0.2, '#ccccff');
+    gradient.addColorStop(0.6, '#99ccff');
+    gradient.addColorStop(1.0, '#9999cc')
+    // gradient.addColorStop(1, 'green');
+    // fillStyle = "#EED971FF";
+    fillStyle = gradient;
 	fillRect(0,0,W,H);
     }
 
@@ -234,11 +242,11 @@ mouse = (function() {
 // Add the application specific mouse listeners!
 //XXX: TODO Make these prettier!
 mouse.mousedowners.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'#fa8072'});
+    addEntityWithoutName({'x':x,'y':y,'colour':'#cc99cc'});
 });
 
 mouse.mouseuppers.push(function(x,y,clicked,e) {
-    addEntityWithoutName({'x':x,'y':y,'colour':'#fa8072'});
+    addEntityWithoutName({'x':x,'y':y,'colour':'#cc99cc'});
 });
 
 mouse.mousedraggers.push(function(x,y,clicked,e) {
