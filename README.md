@@ -7,6 +7,16 @@ See requirements.org (plain-text) for a description of the project.
 
 Make a shared state Websockets drawing program
 
+References
+==============================
+https://www.w3schools.com/tags/canvas_fillstyle.asp
+
+https://github.com/uofa-cmput404/cmput404-slides/tree/master/examples/WebSocketsExamples
+
+Collaboration
+=======
+I consulted Yuetong Liu
+
 Prereqs
 =======
 Create a virtual environment and install the required dependencies.
@@ -59,3 +69,4 @@ Contributors
 * Mark Galloway
 * Abram Hindle
 * Cole Mackenzie
+* Zihan Su
