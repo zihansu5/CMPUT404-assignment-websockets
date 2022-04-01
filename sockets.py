@@ -161,8 +161,8 @@ def world():
         return flask.jsonify(myWorld.world())
     elif request.method == 'POST':
         data = flask_post_json()
-        for key, value in data.items():
-            myWorld.set(key, value)
+        for key in data:
+            myWorld.set(key, data[key])
         return flask.jsonify(myWorld.world())
 
 @app.route("/entity/<entity>")    
